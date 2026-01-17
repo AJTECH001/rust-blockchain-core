@@ -4,6 +4,31 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-bincode = "1.3.3"
+# Serialization/Deserialization framework - used for transforming Rust structs to/from various formats
 serde = { version = "1.0", features = ["derive"] }
+# JSON support for networking protocols and configuration
+serde_json = "1.0"
+# Compact binary serialization - essential for efficient storage and networking in a blockchain
+bincode = "1.3"
+# A high-performance, transactional embedded database used for storing blocks and chain state
 sled = "0.34"
+# Easy command-line argument parsing for the blockchain node CLI
+structopt = "0.3"
+# High-performance hex encoding/decoding for displaying hashes and keys
+data-encoding = "2.3"
+# Foundational cryptography library for SHA256 hashing and ECDSA digital signatures
+ring = "0.17"
+# RIPEMD-160 hash function - specifically used for creating Bitcoin-style addresses
+ripemd160 = "0.9"
+# Base58 encoding - used for user-friendly, non-ambiguous blockchain addresses
+bs58 = "0.5"
+# Universally Unique Identifier generation - used for specific transaction identification
+uuid = { version = "1.3", features = ["v4"] }
+# Thread-safe lazy initialization for global state like the memory pool and nodes list
+once_cell = "1.18"
+# Support for arbitrary-precision integers - necessary for Proof-of-Work target calculations
+num-bigint = "0.4"
+# Logging facade providing a standard API for system logs
+log = "0.4"
+# A simple logger implementation that can be configured via environment variables
+env_logger = "0.10"
